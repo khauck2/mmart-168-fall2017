@@ -1,3 +1,4 @@
+//Karin Hauck
 let language = 'English'
 let languageCode = 'en'
 let jsonData
