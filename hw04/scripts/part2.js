@@ -1,4 +1,5 @@
 //Karin Hauck
+//
 let language = 'English'
 let languageCode = 'en'
 let jsonData
@@ -7,10 +8,12 @@ let jsonData
 const setLanguage = (code) => {
     //Note: language codes here: https://www.w3schools.com/tags/ref_language_codes.asp
     languageCode = code
-    if (code === 'ru') {
-        language = 'Russian'
-    } else if (code === 'es') {
-        language = 'Spanish'
+    if (code === 'lo') {
+        language = 'Lao'
+    } else if (code === 'kg') {
+        language = 'Kongo'
+      } else if (code === 'it') {
+          language = 'Italian'
     } else {
         language = 'English'
     }

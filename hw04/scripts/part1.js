@@ -1,4 +1,5 @@
 //Karin Hauck
+//The setLanguage function changes the language that the tweets will be captured in
 let language
 let languageCode
 
