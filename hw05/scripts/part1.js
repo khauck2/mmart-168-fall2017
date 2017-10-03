@@ -19,6 +19,19 @@ const setLanguage = (code) => {
     getData()
 }
 
+const reverseText = (text) => {
+  //this is called chaining
+  return text.split('').reverse().join('')
+
+}
+const reverseTweet = (tweetText) => {
+  if (tweetText.indexOf('#') === -1){
+    return reverseText(tweetText)
+  } else {
+    return tweetText
+  }
+}
+
 const clearData = () => {
     const element = document.getElementById('results')
     while (element.firstChild) {
