@@ -6,14 +6,33 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+      <img src="http://www.bart.gov/sites/all/themes/bart_desktop/logo.png" alt="">
         <select id="station_list" onchange="getArrivalTimes(this)">
             <option value="">-- Select Your Station--</option>
+            <!--
+            Dynamically append station options here,  using the BART stations API Endpoint:
+            https://api.bart.gov/api/stn.aspx?key=MW9S-E7SL-26DU-VV8V&cmd=stns&json=y
+            -->
+            <!--from Office hours: Instead of copying the option value line over and over again (one way)
+            we're basically going to grab the select element - a station list element - and append a child
+            each time we loop through the data. And inside the child >Select your station<we're going to
+          put the name of the station
+        step 1 - create the opion element, see main.js-->
         </select>
 
-        <main id="results">
-            <!-- JavaScript should populate your code here -->
-        </main>
+        <ol id="results">
+          <li>BERKELEY</li>
+        </ol>
+          <!-- JavaScript should populate your code here.
+        </ol>
+            <!--JavaScript should populate your code here.
+            Dynamically create an ETD dashboard, using the BART ETD stations API Endpoint:
+            https://api.bart.gov/api/etd.aspx?key=MW9S-E7SL-26DU-VV8V&cmd=etd&orig=DBRK&json=y
+            Don't forget to swutch out the "orig" parameter with the correct
+            station code each time the user selects a different station!-->
 
-        <script src="js/main_solutions.js"></script>
+
+
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-## HOMEWORK 10: MORE PRACTICE WITH LOOPS
+## HOMEWORK 10: WORKING WITH THE BART API
 > * Due date: Midnight on Wednesday, 11/15 (2 weeks)
 > * Part I: Setting up your new homework branch
 > * Part II: Browsing the documentation
@@ -39,7 +39,7 @@ Using any loop you want, modify the ***makeStationList*** function so that it po
     * the color of the train line
 
 ### C. Extra Credit Opportunities
-Make the information display look similar to the screenshot below (similar to how BART does it) using CSS (up to 40 points)
+Make the information display look similar to the screenshot below (similar to how BART does it) using CSS (up to 40 points)<br>
 [![BART Dashboard](assets/BART-Dashboard.png "BART Dashboard")](http://www.bart.gov/)
 
 
