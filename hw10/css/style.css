@@ -1,3 +1,26 @@
 body {
-    background: #e6ffcc;
+    background: #ffe6b3;
+
+}
+span {
+    border: solid 1px darkgray;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    font-family: helvetica;
+    color: gray;
+}
+h2 {
+  font-size: 20px;
+  color: gray;
+  font-family: verdana;
+}
+p {
+  color: gray;
+  font-weight: bold
+}
+@font-face {
+  font-family: helvetica;
+  font-size: 15px;
 }

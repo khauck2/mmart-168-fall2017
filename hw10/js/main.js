@@ -4,6 +4,8 @@ const apiKey = 'YYZB-68D5-QMHQ-Y6MI'
 //it's like an api login
 //first ? and after that &s
 //this is a really random change
+///try a completely new post Thanksgiving change
+//Monday after Thanksgiving
 
 const makeStationList = () => {
   //url that asks the question you want to be answered. In this case, give me
@@ -148,21 +150,64 @@ const makeStationList = () => {
 
 
 const getArrivalTimes = () => {
+  //go out an look for the element with the ID staionList – which is in the
+  //HTML lines 9-15 and which is a select element -- and store it in a
+  //variable called stationList.
+  //Every time the user makes a change, it fires the function
+  //Then it's printing the value associated with the selected list item
     const stationList = document.getElementById('station_list')
     // PART III.B.1: The bartStationCode should read from the list and query
     // for the corresponding station
-    const bartStationCode = 'DBRK'
+    const bartStationCode = stationList.value
+    //replaced 'DBRK' above with stationList.value
     console.log('Selected Station Code:', bartStationCode)
     let url = 'https://api.bart.gov/api/etd.aspx?key=' + apiKey + '&cmd=etd' +
                 '&orig=' + bartStationCode + '&json=y'
+        //replaced NBERK above with bartStationCode
     fetch(url)
         .then((response) => {
             return response.json()
-        })
+          })
         .then((json) => {
             json = json.root
-            console.log(json)
-            const results = document.getElementById('results')
+          //she changed this up several times (above) around 43:00
+
+//remember, the three steps are:
+//1. clear out the old results eg div to put in new - this is one way - see Zoom 42:15 and 47:42
+            document.getElementById('results').innerHTML = ""
+//2. add header that shows selected station name
+            const header = document.createElement("h2")
+            header.innerHTML = json.station[0].name
+            document.getElementById('results').appendChild(header)
+//3. log all of the train lines
+            json.station[0].etd.forEach((line) => {
+              console.log('Line: ', line)
+              //and show on screen (name something descriptive):
+              const trainLine = document.createElement("p")
+              trainLine.innerHTML = line.destination
+              document.getElementById('results').appendChild(trainLine)
+              //now we'll have to make another for loop to print out times
+  //4. Log all the estimates for each train line (need to do a loop within a loop)
+              line.estimate.forEach((estimate) => {
+                console.log('Estimate: ', estimate)
+                const departureTime = document.createElement("span")
+                //the nice thing about spans is that they're "in line
+                //you can stack them next to each other
+                departureTime.innerHTML = estimate.minutes
+                if (estimate.delay !== '0') {
+                  departureTime.innerHTML += "!delayed!"
+
+                }
+                departureTime.style.background = estimate.hexcolor
+                document.getElementById('results').appendChild(departureTime)
+              })
+            })
+
+
+
+//all these h2s were divs at first
+
+            /*const results = document.getElementById('results')
             results.innerHTML = ''
             json.station = json.station[0]
             if (!Array.isArray(json.station.etd)) {
@@ -190,10 +235,11 @@ const getArrivalTimes = () => {
                     )
                 })
             })
+            */
         })
-        .catch((err) => {
-            console.log(err)
-        })
+//deleted the error catch 3 lines  - llater you might want it to say
+//something like "the server is down"
 }
 
 makeStationList()
+//this is so important, it runs the whole thing
