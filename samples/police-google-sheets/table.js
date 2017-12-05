@@ -13,28 +13,24 @@ sheets.getData(data => {
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.innerHTML = record.gender
+        td.innerHTML = record.day
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.innerHTML = record.race
+        td.innerHTML = record.jan
+        tr.appendChild(td)
+
+
+
+        td = document.createElement('td')
+        td.innerHTML = record.feb
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.innerHTML = eval('new ' + record.date_cleaned).toDateString()
+        td.innerHTML = record.mar
         tr.appendChild(td)
 
-        td = document.createElement('td')
-        td.innerHTML = record.st_
-        tr.appendChild(td)
 
-        td = document.createElement('td')
-        td.innerHTML = record.killed_by
-        tr.appendChild(td)
-
-        td = document.createElement('td')
-        td.innerHTML = '<a href="' + record.news_link + '">More Info...</a>'
-        tr.appendChild(td)
 
         //
         document.querySelector('#content tbody').appendChild(tr)
