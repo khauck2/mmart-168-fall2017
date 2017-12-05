@@ -2,7 +2,7 @@ var Sheets = function (opts) {
     const key = opts.key
     const query = opts.query
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-    const targetUrl = 'https://spreadsheets.google.com/tq?callback=test&key=' + key
+    const targetUrl = 'https://spreadsheets.google.com/tq?callback=test&key=' + '1_rqfhPWtk7wAzUTEyC-rhmROMTQZVecvFymbXgrrywE'
     let url = proxyUrl + targetUrl
     if (query) {
         url += '&tq=' + query
