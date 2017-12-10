@@ -1,3 +1,26 @@
-/*
-    Your styles here....
-*/
+.container {
+     margin-top: 40px;
+     padding: 20px;
+     background: ##ddff99;
+     width: 700px;
+
+}
+  .p tagline {
+    color: #334d00;
+    font-family: 'Anton', sans-serif;
+      }
+ body {
+      background-color: #cc99ff;
+      height: 100%;
+}
+h1 {
+  color: #334d00;
+  font-family: 'Anton', sans-serif;
+  margin: 10px;
+
+  }
+
+
+  div {
+    background-color: #ddff99;
+  }

@@ -13,17 +13,17 @@ sheets.getData(data => {
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.innerHTML = record.day
+        td.innerHTML = record.pain
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.innerHTML = record.jan
+        td.innerHTML = record.jan1
         tr.appendChild(td)
 
 
 
         td = document.createElement('td')
-        td.innerHTML = record.feb
+        td.innerHTML = record.jan_2
         tr.appendChild(td)
 
         td = document.createElement('td')
